@@ -1,14 +1,12 @@
 import modules
 
 kwords = modules.get_kwords()
-options = modules.get_options()
+methods = modules.get_methods(methods)
 
 passwd = []
 for word in kwords:
-    passwd.append(modules.shuffle(word, options))
+    passwd.append(modules.shuffle(word, methods))
 
-
-
-passwd = modules.shuffle(passwd)
+passwd = modules.shuffle(passwd, methods)
 
 print(passwd)
